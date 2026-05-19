@@ -2,20 +2,48 @@
 <html>
 
 <head>
-<title>Prueba</title>
+
+<title>TEST</title>
+
+<style>
+
+body{
+    background:black;
+    color:white;
+    font-family:Arial;
+    text-align:center;
+    margin-top:100px;
+}
+
+</style>
+
 </head>
 
-<body style="background:black; color:white;">
+<body>
 
-<h1>FUNCIONA GITHUB PAGES</h1>
+<h1>SI VES ESTO FUNCIONA</h1>
+
+<button onclick="cambiar()">
+CLICK
+</button>
+
+<p id="texto">
+esperando...
+</p>
 
 <script>
 
-document.body.innerHTML += "<h2>JavaScript funcionando</h2>";
+function cambiar(){
 
-console.log("FUNCIONA");
+document.getElementById("texto")
+.innerHTML = "JAVASCRIPT FUNCIONANDO";
+
+}
+
+console.log("todo bien");
 
 </script>
 
 </body>
+
 </html>
