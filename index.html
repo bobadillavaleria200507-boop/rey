@@ -3,16 +3,19 @@
 
 <head>
 
-<title>TEST</title>
+<meta charset="utf-8">
+
+<title>Rey AR</title>
+
+<script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.4.5/aframe/build/aframe-ar.js"></script>
 
 <style>
 
 body{
-    background:black;
-    color:white;
-    font-family:Arial;
-    text-align:center;
-    margin-top:100px;
+    margin:0;
+    overflow:hidden;
 }
 
 </style>
@@ -21,28 +24,27 @@ body{
 
 <body>
 
-<h1>SI VES ESTO FUNCIONA</h1>
+<a-scene
+embedded
+vr-mode-ui="enabled: false;"
+renderer="logarithmicDepthBuffer: true;"
+arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;">
 
-<button onclick="cambiar()">
-CLICK
-</button>
+<a-marker preset="hiro">
 
-<p id="texto">
-esperando...
-</p>
+<a-box
+position="0 0.5 0"
+material="color: red;"
+depth="1"
+height="1"
+width="1">
+</a-box>
 
-<script>
+</a-marker>
 
-function cambiar(){
+<a-entity camera></a-entity>
 
-document.getElementById("texto")
-.innerHTML = "JAVASCRIPT FUNCIONANDO";
-
-}
-
-console.log("todo bien");
-
-</script>
+</a-scene>
 
 </body>
 
